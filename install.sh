@@ -13,8 +13,8 @@ if [ "$(whoami)" != "root" ]; then
   exit 1
 fi
 
-function separator {
-  echo "------------------------------------------------"
+separator () {
+  echo "------------------------------------------------";
 }
 
 #make sure scripts are runnable
