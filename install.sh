@@ -14,9 +14,7 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 function separator {
-  echo " "
   echo "------------------------------------------------"
-  echo " "
 }
 
 #make sure scripts are runnable
