@@ -2,9 +2,9 @@
 
 #configuration options
 export LUCEE_VERSION="4.5.1.022"
-export JVM_MAX_HEAP_SIZE="512m"
-export JVM_FILE="server-jre-8u51-linux-x64.gz"
-export JVM_VERSION="1.8.0_51"
+export JVM_MAX_HEAP_SIZE="2048"
+export JVM_FILE="jdk-7-linux-x64.tar.gz"
+export JVM_VERSION="1.7.0_79"
 
 
 #root permission check
@@ -25,6 +25,10 @@ chmod u+x scripts/*.sh
 
 #update ubuntu software
 ./scripts/100-ubuntu-update.sh
+separator
+
+#install oracle jdk 7
+./scripts/150-jve.sh
 separator
 
 #download lucee
