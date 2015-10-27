@@ -26,7 +26,7 @@ chmod u+x scripts/*.sh
 separator
 
 #install oracle jdk 7
-./scripts/150-jve.sh
+./scripts/150-download-jdk.sh
 separator
 
 #download lucee
