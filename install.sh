@@ -1,10 +1,24 @@
 #!/bin/bash
 
 #configuration options
-export LUCEE_VERSION="4.5.1.022"
-export JVM_MAX_HEAP_SIZE="2048"
-export JVM_FILE="jdk-7-linux-x64.tar.gz"
-export JVM_VERSION="1.7.0_79"
+if [[ !$LUCEE_VERSION ]];then
+    export LUCEE_VERSION="5.3.4.80"
+fi
+
+#if [[ $LUCEE_LIGHT ]];then
+    #export LUCEE_JAR_SHA256=""
+#fi
+
+if [[ !$JVM_MAX_HEAP_SIZE ]];then
+    export JVM_MAX_HEAP_SIZE="512m"
+fi
+
+#set JVM_FILE and JVM_VERSION if you want to use an oracle JVM, instead of openjdk
+if [[ !$JVM_FILE ]]; then
+    export JVM_FILE="server-jre-8u212-linux-x64.tar.gz"
+    export JVM_VERSION="1.8.0_212"
+fi
+
 
 
 #root permission check
@@ -45,6 +59,9 @@ separator
 ./scripts/500-nginx.sh
 separator
 
+#configure lucee
+./scripts/600-config.sh
+separator
+
 echo "Setup Complete"
 separator
-echo "GO SET YOUR LUCEE PASSWORDS: http://localhost/lucee/admin/server.cfm"

@@ -24,8 +24,8 @@ echo "<!doctype html><html><body><h1>Hello</h1></body></html>" > $web_root/defau
 
 
 
-#add tomcat7 to www-data group so it can read files
-usermod -aG www-data tomcat7
+#add tomcat8 to www-data group so it can read files
+usermod -aG www-data tomcat8
 
 #set the web directory permissions
 chown -R root:www-data $web_root
@@ -39,7 +39,10 @@ rm /etc/nginx/sites-enabled/default
 echo "Adding our default site"
 ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
-
+if [[ $WHITELIST_IP ]];then
+    echo "Granting $WHITELIST_IP access to /lucee"
+    sed -i "s/#allow 10.0.0.10/allow $WHITELIST_IP/g" /etc/nginx/lucee.conf
+fi
 
 
 service nginx restart
