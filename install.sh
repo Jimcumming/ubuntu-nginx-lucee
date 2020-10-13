@@ -5,7 +5,6 @@ if [ -f .env ]
 then
   echo "importing .env file"
   export $(egrep -v '^#' .env | xargs)
-  printenv
 fi
 
 #configuration options

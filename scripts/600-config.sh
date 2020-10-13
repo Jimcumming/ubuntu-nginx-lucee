@@ -6,7 +6,7 @@ echo "Installing CommandBox"
 curl -fsSl https://downloads.ortussolutions.com/debs/gpg | apt-key add -
 echo "deb https://downloads.ortussolutions.com/debs/noarch /" | tee -a /etc/apt/sources.list.d/commandbox.list
 apt-get update && apt-get install commandbox -y
-
+box config set nonInteractiveShell=true
 box install commandbox-cfconfig
 
 if [[ !$ADMIN_PASSWORD ]]; then

@@ -28,10 +28,10 @@ else
 fi
 
 echo "Installing mod_cfml Valve for Automatic Virtual Host Configuration"
-if [ -f /opt/lucee/current/mod_cfml-valve_v1.1.05.jar ]; then
-  cp /opt/lucee/current/mod_cfml-valve_v1.1.05.jar /opt/lucee/$jar_folder
+if [ -f /opt/lucee/current/mod_cfml-valve_v1.1.11.jar ]; then
+  cp /opt/lucee/current/mod_cfml-valve_v1.1.11.jar /opt/lucee/$jar_folder
 else
-  curl --location -o /opt/lucee/$jar_folder/mod_cfml-valve_v1.1.05.jar https://raw.githubusercontent.com/utdream/mod_cfml/master/java/mod_cfml-valve_v1.1.05.jar
+  curl --location -o /opt/lucee/$jar_folder/mod_cfml-valve_v1.1.11.jar https://github.com/viviotech/mod_cfml/raw/master/java/mod_cfml-valve_v1.1.11.jar
 fi
 
 ln -s /opt/lucee/$jar_folder /opt/lucee/current
