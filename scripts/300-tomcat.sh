@@ -33,11 +33,11 @@ else
   curl --location -o /opt/lucee/current/mod_cfml-valve_v1.1.11.jar https://github.com/viviotech/mod_cfml/raw/master/java/mod_cfml-valve_v1.1.11.jar
 fi
 
-MODCFML_JAR_SHA256="22c769ccead700006d53052707370c5361aabb9096473f92599708e614dad638"
-if [[ $(sha256sum "/opt/lucee/current/mod_cfml-valve_v1.1.05.jar") =~ "$MODCFML_JAR_SHA256" ]]; then
-    echo "Verified mod_cfml-valve_v1.1.05.jar SHA-256: $MODCFML_JAR_SHA256"
+MODCFML_JAR_SHA256="fa96cfb7d7b416acbfbb8e36e8df016c098ac47d723077547e812b4c4e2e394d"
+if [[ $(sha256sum "/opt/lucee/current/mod_cfml-valve_v1.1.11.jar") =~ "$MODCFML_JAR_SHA256" ]]; then
+    echo "Verified mod_cfml-valve_v1.1.11.jar SHA-256: $MODCFML_JAR_SHA256"
 else
-    echo "SHA-256 Checksum of mod_cfml-valve_v1.1.05.jar verification failed"
+    echo "SHA-256 Checksum of mod_cfml-valve_v1.1.11.jar verification failed"
     exit 1
 fi
 
