@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing Tomcat "
-apt-get install tomcat9
+apt-get install tomcat9 -y
 
 echo "Configuring Tomcat"
 
