@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#load config from .env if avaiable
+if [ -f .env ]
+then
+  export $(cat .env | sed 's/#.*//g' | xargs)
+fi
+
 #configuration options
 if [[ !$LUCEE_VERSION ]];then
     export LUCEE_VERSION="5.3.6.61"
