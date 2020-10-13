@@ -37,5 +37,5 @@ fi
 ln -s /opt/lucee/$jar_folder /opt/lucee/current
 
 echo "Setting Permissions on Lucee Folders"
-chown -R tomcat8:tomcat8 /opt/lucee
+chown -R tomcat:tomcat /opt/lucee
 chmod -R 750 /opt/lucee

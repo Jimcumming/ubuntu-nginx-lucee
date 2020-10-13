@@ -27,10 +27,10 @@ cp etc/tomcat9/catalina.properties /etc/tomcat9/
 cp /etc/default/tomcat9 backup/etc/default/tomcat9
 
 echo "Installing mod_cfml Valve for Automatic Virtual Host Configuration"
-if [ -f lib/mod_cfml-valve_v1.1.05.jar ]; then
-  cp lib/mod_cfml-valve_v1.1.05.jar /opt/lucee/current/
+if [ -f lib/mod_cfml-valve_v1.1.11.jar ]; then
+  cp lib/mod_cfml-valve_v1.1.11.jar /opt/lucee/current/
 else
-  curl --location -o /opt/lucee/current/mod_cfml-valve_v1.1.05.jar https://raw.githubusercontent.com/utdream/mod_cfml/master/java/mod_cfml-valve_v1.1.05.jar
+  curl --location -o /opt/lucee/current/mod_cfml-valve_v1.1.11.jar https://github.com/viviotech/mod_cfml/raw/master/java/mod_cfml-valve_v1.1.11.jar
 fi
 
 MODCFML_JAR_SHA256="22c769ccead700006d53052707370c5361aabb9096473f92599708e614dad638"
