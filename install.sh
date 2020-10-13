@@ -3,7 +3,9 @@
 #load config from .env if avaiable
 if [ -f .env ]
 then
-  export $(cat .env | sed 's/#.*//g' | xargs)
+  echo "importing .env file"
+  export $(egrep -v '^#' .env | xargs)
+  printenv
 fi
 
 #configuration options
@@ -43,10 +45,6 @@ chmod u+x scripts/*.sh
 
 #update ubuntu software
 ./scripts/100-ubuntu-update.sh
-separator
-
-#install oracle jdk 7
-./scripts/150-download-jdk.sh
 separator
 
 #download lucee
