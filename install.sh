@@ -15,8 +15,8 @@ fi
 
 #set JVM_FILE and JVM_VERSION if you want to use an oracle JVM, instead of openjdk
 if [[ !$JVM_FILE ]]; then
-    export JVM_FILE="server-jre-8u212-linux-x64.tar.gz"
-    export JVM_VERSION="1.8.0_212"
+    export JVM_FILE="server-jre-8u265-linux-x64.tar.gz"
+    export JVM_VERSION="1.8.0_265"
 fi
 
 
